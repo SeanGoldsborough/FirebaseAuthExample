@@ -12,6 +12,23 @@ import Firebase
 
 class FirebaseLoginVC: UIViewController {
     
+    
+    @IBOutlet weak var emailTF: UITextField!
+    
+    @IBOutlet weak var passwordTF: UITextField!
+    
+    @IBAction func signInButton(_ sender: Any) {
+        Auth.auth().createUser(withEmail: emailTF.text!, password: passwordTF.text!) { user, error in
+            if error == nil {
+                // 3
+                Auth.auth().signIn(withEmail: self.emailTF.text!,
+                                   password: self.passwordTF.text!)
+                let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "NextVC") as! ViewController
+                self.navigationController?.pushViewController(nextVC, animated: true)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P0q-jF-3ya">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,7 +22,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirebaseAuthExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NextVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="FirebaseAuthExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,12 +44,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="272.80000000000001" y="-54.422788605697157"/>
+            <point key="canvasLocation" x="612" y="-54.422788605697157"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="p46-C8-3yV">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" title="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dGw-ET-Pbu" customClass="LoginVC" customModule="StudioMedDatabase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirebaseLoginVC" title="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dGw-ET-Pbu" customClass="FirebaseLoginVC" customModule="FirebaseAuthExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7AG-GO-8I0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,7 +93,7 @@
                                             <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="signInButton:" destination="dGw-ET-Pbu" eventType="touchUpInside" id="obd-wG-kKb"/>
+                                            <action selector="signInButton:" destination="dGw-ET-Pbu" eventType="touchUpInside" id="dlD-VG-1ik"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2H-jK-lZh">
@@ -129,7 +129,7 @@
                                     <action selector="signUpButton:" destination="dGw-ET-Pbu" eventType="touchUpInside" id="gOi-3H-41E"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StudioMedLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="hgA-x0-nmF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hgA-x0-nmF">
                                 <rect key="frame" x="16" y="155" width="343" height="50"/>
                                 <color key="tintColor" red="0.98760443929999997" green="0.57333081959999999" blue="0.51162141559999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -138,31 +138,14 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="v0Y-3W-58N"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1A-uh-eoF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PvM-VZ-FaS">
-                                        <rect key="frame" x="169" y="315" width="37" height="37"/>
-                                        <color key="color" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </activityIndicatorView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="PvM-VZ-FaS" firstAttribute="centerY" secondItem="Q1A-uh-eoF" secondAttribute="centerY" id="miJ-Ta-Vs1"/>
-                                    <constraint firstItem="PvM-VZ-FaS" firstAttribute="centerX" secondItem="Q1A-uh-eoF" secondAttribute="centerX" id="pCc-QT-sqY"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.20832121370000001" green="0.22719925639999999" blue="0.23182839159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Q1A-uh-eoF" firstAttribute="leading" secondItem="2vs-JK-Dux" secondAttribute="leading" id="3fm-3M-6S0"/>
                             <constraint firstItem="M8h-nO-3WH" firstAttribute="centerY" secondItem="7AG-GO-8I0" secondAttribute="centerY" id="6DV-Pg-ndx"/>
                             <constraint firstItem="2vs-JK-Dux" firstAttribute="trailing" secondItem="AkP-VO-Sa6" secondAttribute="trailing" constant="16" id="8Lp-nV-ZYc"/>
                             <constraint firstItem="Nah-in-EGi" firstAttribute="top" secondItem="hgA-x0-nmF" secondAttribute="bottom" constant="25.5" id="97b-2m-Y3D"/>
                             <constraint firstItem="M8h-nO-3WH" firstAttribute="leading" secondItem="2vs-JK-Dux" secondAttribute="leading" constant="16" id="Ccs-FE-75m"/>
                             <constraint firstItem="2vs-JK-Dux" firstAttribute="trailing" secondItem="hgA-x0-nmF" secondAttribute="trailing" constant="16" id="DbZ-ch-Zmq"/>
-                            <constraint firstItem="Q1A-uh-eoF" firstAttribute="top" secondItem="7AG-GO-8I0" secondAttribute="top" id="Eyg-2c-BLn"/>
-                            <constraint firstItem="Q1A-uh-eoF" firstAttribute="trailing" secondItem="2vs-JK-Dux" secondAttribute="trailing" id="Hc6-yg-fEM"/>
                             <constraint firstItem="2vs-JK-Dux" firstAttribute="trailing" secondItem="M8h-nO-3WH" secondAttribute="trailing" constant="16" id="HeM-GM-rUO"/>
                             <constraint firstItem="AkP-VO-Sa6" firstAttribute="leading" secondItem="2vs-JK-Dux" secondAttribute="leading" constant="16" id="JaE-jL-Tth"/>
                             <constraint firstItem="hgA-x0-nmF" firstAttribute="leading" secondItem="2vs-JK-Dux" secondAttribute="leading" constant="16" id="Lrh-Af-eUo"/>
@@ -170,25 +153,37 @@
                             <constraint firstItem="hgA-x0-nmF" firstAttribute="centerX" secondItem="7AG-GO-8I0" secondAttribute="centerX" id="P6O-tD-5If"/>
                             <constraint firstItem="2vs-JK-Dux" firstAttribute="bottom" secondItem="AkP-VO-Sa6" secondAttribute="bottom" constant="20" id="ZTW-Qg-drU"/>
                             <constraint firstItem="hgA-x0-nmF" firstAttribute="leading" secondItem="2vs-JK-Dux" secondAttribute="leading" constant="16" id="dzO-18-gOf"/>
-                            <constraint firstItem="Q1A-uh-eoF" firstAttribute="bottom" secondItem="2vs-JK-Dux" secondAttribute="bottom" id="tAG-Av-KQr"/>
                             <constraint firstItem="2vs-JK-Dux" firstAttribute="trailing" secondItem="hgA-x0-nmF" secondAttribute="trailing" constant="16" id="v0E-wS-QCA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2vs-JK-Dux"/>
                     </view>
                     <navigationItem key="navigationItem" id="s6x-4U-rOd"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="PvM-VZ-FaS" id="JEB-vl-ys0"/>
-                        <outlet property="activityOverlay" destination="Q1A-uh-eoF" id="AJV-Jb-WuX"/>
-                        <outlet property="emailTextField" destination="Nah-in-EGi" id="PRh-ZK-fxA"/>
-                        <outlet property="passwordTextField" destination="Kpr-f2-oll" id="d7W-uc-F44"/>
+                        <outlet property="emailTF" destination="Nah-in-EGi" id="0D5-YK-qg5"/>
+                        <outlet property="passwordTF" destination="Kpr-f2-oll" id="Nrw-ZP-mMl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DdL-4T-R1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-492" y="-54.422788605697157"/>
+            <point key="canvasLocation" x="-152.80000000000001" y="-54.422788605697157"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vxf-hd-OYM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P0q-jF-3ya" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zZp-vy-OJj">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dGw-ET-Pbu" kind="relationship" relationship="rootViewController" id="sI6-NQ-eeH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5m3-GA-K34" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1793" y="-24"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="StudioMedLogoWhite" width="16" height="16"/>
-    </resources>
 </document>

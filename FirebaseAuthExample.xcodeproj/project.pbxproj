@@ -32,6 +32,7 @@
 		C6B9199620DA6EAC009427B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6B9199C20DA6FE4009427B7 /* FirebaseLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginVC.swift; sourceTree = "<group>"; };
 		C6B9199E20DA715E009427B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C6B919A020DA72EF009427B7 /* FirebaseAuthExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseAuthExample.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 		C6B9198620DA6EAC009427B7 /* FirebaseAuthExample */ = {
 			isa = PBXGroup;
 			children = (
+				C6B919A020DA72EF009427B7 /* FirebaseAuthExample.entitlements */,
 				C6B9198720DA6EAC009427B7 /* AppDelegate.swift */,
 				C6B9198920DA6EAC009427B7 /* ViewController.swift */,
 				C6B9199C20DA6FE4009427B7 /* FirebaseLoginVC.swift */,
@@ -132,6 +134,11 @@
 					C6B9198320DA6EAC009427B7 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -358,6 +365,7 @@
 			baseConfigurationReference = 610915011201CE351DB5D3FB /* Pods-FirebaseAuthExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirebaseAuthExample/FirebaseAuthExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NA78F3F7G;
 				INFOPLIST_FILE = FirebaseAuthExample/Info.plist;
@@ -374,6 +382,7 @@
 			baseConfigurationReference = 78BA6E3E363980833214083F /* Pods-FirebaseAuthExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirebaseAuthExample/FirebaseAuthExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NA78F3F7G;
 				INFOPLIST_FILE = FirebaseAuthExample/Info.plist;
